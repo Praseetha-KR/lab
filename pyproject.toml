@@ -1,0 +1,13 @@
+[project]
+name = "lab"
+version = "0.0.1"
+description = "Experimenting & learning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipdb>=0.13.13",
+    "ipython>=8.30.0",
+    "pip>=24.3.1",
+    "psutil>=6.1.0",
+    "termcolor>=2.5.0",
+]
