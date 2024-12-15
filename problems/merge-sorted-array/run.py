@@ -1,7 +1,7 @@
-from termcolor import colored
+from types import ModuleType, FunctionType
 
 
-def run(approach):
+def run(approach: ModuleType, display_io: FunctionType) -> None:
     inputs = [
         [
             [1,2,3,0,0,0],
@@ -25,7 +25,7 @@ def run(approach):
 
     for params in inputs:
         ret = approach.Solution().merge(params[0], params[1], params[2], params[3])
-        print(colored("Input:", "yellow", attrs=["bold"]))
-        print(f"nums1 = {params[0]}, m = {params[1]}, nums2 = {params[2]}, n = {params[3]}\n")
-        print(colored("Output:", "green", attrs=["bold"]))
-        print(f"{ret}\n\n")
+        display_io(
+            input=f"nums1 = {params[0]}, m = {params[1]}, nums2 = {params[2]}, n = {params[3]}",
+            output=ret,
+        )

@@ -1,10 +1,11 @@
 import time
 import psutil
 import os
+from types import FunctionType
 from termcolor import colored
 
 
-def measure_performance(func):
+def measure_performance(func: FunctionType) -> FunctionType:
     def wrapper(*args, **kwargs):
         # Get the process ID
         process = psutil.Process(os.getpid())
