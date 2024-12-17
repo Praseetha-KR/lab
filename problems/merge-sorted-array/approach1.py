@@ -1,12 +1,9 @@
 class Solution:
     def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
         # shift right leaving space for n elements
         for i in range(m + n - 1, n - 1, -1):
             nums1[i] = nums1[i - n]
-            
+
         i = n
         j = 0
         k = 0

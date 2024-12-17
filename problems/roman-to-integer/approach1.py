@@ -19,13 +19,13 @@ class Solution:
     }
     def romanToInt(self, s: str) -> int:
         res = 0
-        l = len(s)
-        if l == 1:
+        s_len = len(s)
+        if s_len == 1:
             return self.SYMBOL_VALUE_MAP[s]
-        
+
         c = 0
         n = 1
-        while n <= l:
+        while n <= s_len:
             ds = self.DOUBLE_SYMBOL_VALUE_MAP.get(s[c:n + 1], None)
             if ds:
                 res += ds

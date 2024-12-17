@@ -1,4 +1,4 @@
-from types import ModuleType, FunctionType
+from types import FunctionType, ModuleType
 
 
 def run(approach: ModuleType, display_io: FunctionType) -> None:

@@ -1,7 +1,8 @@
-import time
-import psutil
 import os
+import time
 from types import FunctionType
+
+import psutil
 from termcolor import colored
 
 
@@ -24,8 +25,14 @@ def measure_performance(func: FunctionType) -> FunctionType:
         execution_time = end_time - start_time
         memory_usage = mem_after - mem_before
 
-        print(colored(f"Execution time: ", "light_blue"), colored(f"{execution_time:.6f} seconds", "light_magenta"))
-        print(colored(f"Memory usage: ", "light_blue"), colored(f"{memory_usage:.6f} MB", "light_magenta"))
+        print(
+            colored("Execution time: ", "light_blue"),
+            colored(f"{execution_time:.6f} seconds", "light_magenta")
+        )
+        print(
+            colored("Memory usage: ", "light_blue"),
+            colored(f"{memory_usage:.6f} MB", "light_magenta")
+        )
 
         return result
 

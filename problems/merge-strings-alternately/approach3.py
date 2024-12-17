@@ -1,6 +1,6 @@
 class Solution:
     # for loop with maxlen
-    
+
     def mergeAlternately(self, word1: str, word2: str) -> str:
         res = []
         l1 = len(word1)

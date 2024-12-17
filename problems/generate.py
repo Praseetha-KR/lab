@@ -1,7 +1,7 @@
 import os
 import sys
-from termcolor import colored
 
+from termcolor import colored
 
 LEETCODE_PROBLEM_URL = "https://leetcode.com/problems/{}"
 

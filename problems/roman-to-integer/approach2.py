@@ -19,12 +19,12 @@ class Solution:
     }
     def romanToInt(self, s: str) -> int:
         res = 0
-        l = len(s)
-        if l == 1:
+        s_len = len(s)
+        if s_len == 1:
             return self.SYMBOL_VALUE_MAP[s]
-        
+
         i = 0
-        while i < l:
+        while i < s_len:
             ds = self.DOUBLE_SYMBOL_VALUE_MAP.get(s[i:i + 2], None)
             if ds:
                 res += ds

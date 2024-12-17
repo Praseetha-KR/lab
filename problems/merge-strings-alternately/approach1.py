@@ -9,7 +9,7 @@ class Solution:
         while i < l1 and i < l2:
             res += word1[i] + word2[i]
             i += 1
-        
+
         if i < l1:
             res += word1[i:]
         else:

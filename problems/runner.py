@@ -1,9 +1,9 @@
 import importlib
-import os
 import sys
 from types import ModuleType
-from termcolor import colored
+
 from measure_performance import measure_performance
+from termcolor import colored
 
 
 def display_io(input: str, output: str) -> None:
@@ -16,7 +16,7 @@ def display_io(input: str, output: str) -> None:
 @measure_performance
 def runner(problem_run_module: ModuleType, approach_module: ModuleType) -> None:
     problem_run_module.run(approach_module, display_io)
-    
+
 
 if __name__ == "__main__":
     if len(sys.argv)!= 3:

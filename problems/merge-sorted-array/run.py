@@ -1,4 +1,4 @@
-from types import ModuleType, FunctionType
+from types import FunctionType, ModuleType
 
 
 def run(approach: ModuleType, display_io: FunctionType) -> None:
@@ -26,6 +26,9 @@ def run(approach: ModuleType, display_io: FunctionType) -> None:
     for params in inputs:
         ret = approach.Solution().merge(params[0], params[1], params[2], params[3])
         display_io(
-            input=f"nums1 = {params[0]}, m = {params[1]}, nums2 = {params[2]}, n = {params[3]}",
+            input=(
+                f"nums1 = {params[0]}, m = {params[1]}, "
+                f"nums2 = {params[2]}, n = {params[3]}"
+            ),
             output=ret,
         )

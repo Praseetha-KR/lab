@@ -21,7 +21,7 @@ class Solution:
             i -= 1
             j -= 1
             k -= 2
-        
+
         # remaining
         if j >= 0:
             for r in range(j + 1):
