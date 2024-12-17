@@ -5,6 +5,20 @@ from termcolor import colored
 
 LEETCODE_PROBLEM_URL = "https://leetcode.com/problems/{}"
 
+RUN_PY_TPL = """
+from types import ModuleType, FunctionType
+
+
+def run(approach: ModuleType, display_io: FunctionType) -> None:
+    inputs = []
+
+    for params in inputs:
+        ret = approach.Solution().fn(params[0])
+        display_io(
+            input=f"i = {params[0]}",
+            output=ret,
+        )
+"""
 
 def get_dir_tree(dir: str) -> None:
     dir_tree = ""
@@ -26,17 +40,18 @@ def get_dir_tree(dir: str) -> None:
 def generate_problem_dir(problem_name: str):
     try:
         problem_dir = f"problems/{problem_name}"
-        
+
         os.mkdir(problem_dir)
         print(colored(f"Created problem directory: {problem_name}", "green"))
 
-        with open(
-            f"{problem_dir}/problem_statement.txt", "w"
-        ) as fd:
+        with open(f"{problem_dir}/problem_statement.txt", "w") as fd:
             fd.write(LEETCODE_PROBLEM_URL.format(problem_name))
 
         with open(f"{problem_dir}/approach1.py", "w"):
             pass
+
+        with open(f"{problem_dir}/run.py", "w") as fd:
+            fd.write(RUN_PY_TPL)
 
         print(colored(get_dir_tree(problem_dir)))
 
