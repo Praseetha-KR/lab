@@ -5,8 +5,7 @@ from termcolor import colored
 
 LEETCODE_PROBLEM_URL = "https://leetcode.com/problems/{}"
 
-RUN_PY_TPL = """
-from types import FunctionType, ModuleType
+RUN_PY_TPL = """from types import FunctionType, ModuleType
 
 
 def run(approach: ModuleType, display_io: FunctionType) -> None:
