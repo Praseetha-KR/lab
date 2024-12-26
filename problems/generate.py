@@ -40,12 +40,12 @@ def get_dir_tree(dir: str) -> None:
     return dir_tree
 
 
-def generate_problem_dir(problem_name: str):
+def generate_problem_dir(problem_name: str, problem_number: str):
     try:
-        problem_dir = f"problems/{problem_name}"
+        problem_dir = f"problems/{problem_number}-{problem_name}"
 
         os.mkdir(problem_dir)
-        print(colored(f"Created problem directory: {problem_name}", "green"))
+        print(colored(f"Created problem directory: {problem_dir}", "green"))
 
         with open(f"{problem_dir}/problem_statement.txt", "w") as fd:
             fd.write(LEETCODE_PROBLEM_URL.format(problem_name))
@@ -63,7 +63,12 @@ def generate_problem_dir(problem_name: str):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print(colored("Usage: python problems/generate.py <problem-name>", "red"))
+    if len(sys.argv) != 3:
+        print(
+            colored(
+                "Usage: python problems/generate.py <problem-name> <problem-number>", 
+                "red"
+            )
+        )
         sys.exit(1)
-    generate_problem_dir(sys.argv[1])
+    generate_problem_dir(sys.argv[1], sys.argv[2])
