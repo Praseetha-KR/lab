@@ -8,6 +8,7 @@ def run(approach: ModuleType, display_io: FunctionType) -> None:
         [[[9]], [[1,0]]],
         [[[9,9]], [[1,0,0]]],
         [[[9,9,9,9,9]], [[1,0,0,0,0,0]]],
+        [[[3, 9, 4, 9, 9, 0, 2, 1, 9]], [[3,9,4,9,9,0,2,2,0]]],
     ]
 
     for input, expected_output in test_cases:
