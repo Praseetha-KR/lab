@@ -1,5 +1,6 @@
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
+        # Bit by bit computation - hashmap
         maxlen = max(len(a), len(b))
         a_filled = a.zfill(maxlen)
         b_filled = b.zfill(maxlen)
