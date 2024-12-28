@@ -5,14 +5,14 @@ from .base import ListNode
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        # Using Floyd's Cycle Finding Algorithm
+        # Using Floyd's cycle finding algorithm
         if head is None:
-            return None
-        slow = head
-        fast = head.next
-        while fast is not None and fast.next is not None:
-            if slow == fast:
-                return True
-            slow = slow.next
-            fast = fast.next.next
-        return False
+            return False
+        tortoise = head
+        hare = head.next
+        while tortoise != hare:
+            if hare is None or hare.next is None:
+                return False
+            tortoise = tortoise.next
+            hare = hare.next.next
+        return True
