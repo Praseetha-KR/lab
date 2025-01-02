@@ -7,6 +7,7 @@ def run(approach: ModuleType, display_io: FunctionType) -> None:
         [["race a car"], [False]],
         [[" "], [True]],
         [["0P"], [False]],
+        [[".,"], [True]],
     ]
 
     for input, expected_output in test_cases:
