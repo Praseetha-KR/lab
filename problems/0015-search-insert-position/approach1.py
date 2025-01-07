@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def binary_search(self, nums: List[int], target: int, l: int, r: int) -> int:  # noqa: E741
+    def binary_search(self, nums: List[int], target: int, l: int, r: int) -> int:
         if l == r:
             if target > nums[l]:
                 return l + 1
@@ -16,6 +16,6 @@ class Solution:
         return self.binary_search(nums, target, mid + 1, r)
 
     def searchInsert(self, nums: List[int], target: int) -> int:
-        l = 0  # noqa: E741
+        l = 0
         r = len(nums) - 1
         return self.binary_search(nums, target, l, r)

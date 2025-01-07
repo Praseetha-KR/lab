@@ -1,7 +1,7 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
         # binary search
-        l = 0  # noqa: E741
+        l = 0
         r = x
         while l <= r:
             pivot = l + (r - l) // 2
@@ -11,4 +11,4 @@ class Solution:
             elif x < square:
                 r = pivot - 1
                 continue
-            l = pivot + 1  # noqa: E741
+            l = pivot + 1
