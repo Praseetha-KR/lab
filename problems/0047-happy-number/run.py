@@ -10,7 +10,7 @@ def run(approach: ModuleType, display_io: FunctionType) -> None:
     for input, expected_output in test_cases:
         ret = approach.Solution().isHappy(input[0])
         display_io(
-            input=f"i = {input[0]}",
+            input=f"n = {input[0]}",
             output=ret,
         )
 
