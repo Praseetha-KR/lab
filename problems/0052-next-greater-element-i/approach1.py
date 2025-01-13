@@ -12,6 +12,6 @@ class Solution:
                     found = True
                 if found and n2 > n1:
                     next_greater = n2
-                    break 
+                    break
             res.append(next_greater)
         return res

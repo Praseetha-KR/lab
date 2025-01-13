@@ -11,5 +11,5 @@ class Solution:
                     found = True
                 if found and n2 > n1:
                     res[i] = n2
-                    break 
+                    break
         return res
