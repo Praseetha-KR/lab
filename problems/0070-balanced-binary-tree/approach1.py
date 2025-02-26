@@ -10,12 +10,16 @@ from .base import TreeNode
 #         self.right = right
 
 class Solution:
-    def height(self, node):
+    # Top-down recursion
+    # Time complexity: O(nlogn)
+    # Space complexity: O(n)
+
+    def height(self, node: Optional[TreeNode]) -> int:
         if node is None:
             return 0
         return 1 + max(self.height(node.left), self.height(node.right))
 
-    def is_balanced(self, node):
+    def is_balanced(self, node: Optional[TreeNode]) -> bool:
         if node is None:
             return True
         return (
