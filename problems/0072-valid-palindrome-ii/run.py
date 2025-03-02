@@ -8,7 +8,7 @@ def run(approach: ModuleType, display_io: FunctionType) -> None:
         [["abc"], [False]],
         [["deeee"], [True]],
         [["zryxeededexyz"], [False]],
-        [["aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"], [True]],
+        [["aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"], [True]],  # noqa
     ]
 
     for input, expected_output in test_cases:

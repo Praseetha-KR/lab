@@ -15,7 +15,10 @@ class Solution:
         j = len(s) - 1
         while i < j:
             if s[i] != s[j]:
-                return self.is_palindrome(s, i + 1, j) or self.is_palindrome(s, i, j - 1)
+                return (
+                    self.is_palindrome(s, i + 1, j)
+                    or self.is_palindrome(s, i, j - 1)
+                )
             i += 1
             j -= 1
         return True
